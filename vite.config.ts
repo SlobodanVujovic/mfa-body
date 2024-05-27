@@ -10,9 +10,22 @@ export default defineConfig({
       name: 'remoteBody',
       filename: 'remoteBody.js',
       exposes: {
-        './App': './src/App.tsx',
+        './RemoteBody': './src/App.tsx',
       },
       shared: ['react', 'react-dom'],
     }),
   ],
+  preview: {
+    host: 'localhost',
+    port: 5173,
+    strictPort: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  },
+  build: {
+    target: 'esnext',
+    minify: false,
+    cssCodeSplit: false,
+  },
 });
