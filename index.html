@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,5 +9,27 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- TODO Vidi zasto IsaComponent ne radi. slvu  -->
+    <script>
+      class IsaComponent extends HTMLElement {
+        connectedCallback() {
+          this.innerHTML = 'Hello from Isa Web Component!';
+        }
+      }
+
+      customElements.define('isa-component', IsaComponent);
+    </script>
+    <style>
+      #isaWebComponent {
+        background-color: pink;
+      }
+    </style>
+    <div id="isaWebComponent">
+      <isa-component></isa-component>
+    </div>
+
+    <!-- TODO Vidi zasto vujo-component ne radi. slvu  -->
+    <vujo-component></vujo-component>
   </body>
 </html>

@@ -10,7 +10,9 @@ export default defineConfig({
       name: 'remoteBody',
       filename: 'remoteBody.js',
       exposes: {
-        './RemoteBody': './src/App.tsx',
+        './RemoteBody1': './src/Body1.tsx',
+        './RemoteBody2': './src/Body2.tsx',
+        // './vujo-component': './src/VujoWebComponent.tsx',
       },
       shared: ['react', 'react-dom'],
     }),
