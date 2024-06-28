@@ -12,7 +12,6 @@ export default defineConfig({
       exposes: {
         './RemoteBody1': './src/Body1.tsx',
         './RemoteBody2': './src/Body2.tsx',
-        // './vujo-component': './src/VujoWebComponent.tsx',
       },
       shared: ['react', 'react-dom'],
     }),
