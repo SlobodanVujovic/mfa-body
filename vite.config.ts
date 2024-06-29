@@ -12,6 +12,9 @@ export default defineConfig({
       exposes: {
         './RemoteBody1': './src/Body1.tsx',
         './RemoteBody2': './src/Body2.tsx',
+        './RemoteTsWebBody': './src/WebBody.ts',
+        // Not working because there are 2 React instances in 1 app.
+        // './RemoteTsWebBodyWithReact': './src/WebBodyWithReact.tsx',
       },
       shared: ['react', 'react-dom'],
     }),
