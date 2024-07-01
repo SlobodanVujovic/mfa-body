@@ -9,6 +9,7 @@ class RemoteTsWebCompWithReactComp extends HTMLElement {
   render() {
     const root = ReactDOM.createRoot(this);
     root.render(<Body1 />);
+    // This works but previous code doesn't work.
     // this.innerHTML = 'Remote TS Web Component with React Component';
   }
 }
